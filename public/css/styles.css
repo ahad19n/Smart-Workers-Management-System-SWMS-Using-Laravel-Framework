@@ -1,0 +1,343 @@
+body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.navbar-brand{
+    font-weight: 600;
+}
+
+.kpi-card{
+    border-radius: 12px;padding: 0.6rem;
+}
+
+.kpi-icon {
+    font-size: 2.4rem;color: rgba(13,110,253,0.9);
+}
+
+.shift {
+    text-align:center;
+    font-size:0.95rem;
+    padding:0.4rem;
+}
+
+.shift-morning {
+    background: linear-gradient(90deg,#e9f7ff,#fff);
+    border-radius:6px;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.badge {
+    font-size: 0.75rem;
+}
+
+.table thead th {
+    vertical-align: middle;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 .15rem rgba(13,110,253,0.15);
+}
+
+/* small tweaks */
+.container-fluid.p-4 {
+    max-width:1200px;
+}
+
+/* Navbar custom styles moved from layout */
+.swms-navbar { 
+    padding: 1rem 0; 
+}
+
+.swms-navbar .navbar-brand { 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+}
+
+.swms-navbar .bi { 
+    font-size: 1.4rem; 
+}
+
+.swms-navbar .nav-btn { 
+    border-radius: 0.5rem; 
+    padding: 0.6rem 0.9rem; 
+    font-weight:600; 
+}
+
+.swms-navbar .nav-btn.active {
+    background: rgba(255,255,255,0.12); 
+    color: #fff; 
+}
+
+.swms-navbar .nav-btn:hover { 
+    background: rgba(255,255,255,0.08); 
+}
+
+/* Smooth content transition */
+.pjax-fade-enter { 
+    opacity: 0; 
+    transform: translateY(8px); 
+}
+
+.pjax-fade-enter-active { 
+    transition: opacity .28s ease, transform .28s ease; 
+    opacity: 1; 
+    transform: translateY(0);
+}
+
+.pjax-fade-exit { 
+    opacity: 1; 
+}
+
+.pjax-fade-exit-active { 
+    transition: opacity .2s ease; 
+    opacity: 0; 
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+	.swms-navbar .nav-btn { padding: 0.45rem 0.6rem; font-size: 0.9rem; }
+}
+
+/* Floating Action Button (Dashboard quick actions) */
+.fab {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	z-index: 1200;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	align-items: flex-end;
+}
+.fab .fab-main {
+	width: 56px; height: 56px; border-radius: 50%;
+	display: inline-flex; align-items: center; justify-content: center;
+	box-shadow: 0 6px 18px rgba(13,110,253,0.18); background: #0d6efd; color: #fff;
+	transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.fab .fab-main:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 22px rgba(13,110,253,0.22); 
+}
+
+.fab .fab-item { 
+    display:block; 
+    text-decoration:none; 
+}
+
+.fab .fab-item .btn { 
+    border-radius: 0.5rem; 
+}
+
+/* small pulse to draw attention */
+.fab .fab-main::after{
+	content: ''; 
+    position: absolute; 
+    width: 56px; 
+    height:56px; 
+    border-radius:50%;
+	box-shadow: 0 0 0 0 rgba(13,110,253,0.35); 
+    animation: fab-pulse 2.2s infinite;
+}
+
+@keyframes fab-pulse{ 0%{ box-shadow: 0 0 0 0 rgba(13,110,253,0.28);} 70%{ box-shadow: 0 0 0 14px rgba(13,110,253,0);} 100%{ box-shadow: 0 0 0 0 rgba(13,110,253,0);} }
+
+/* collapsed/expanded states */
+.fab.collapsed .fab-menu{ 
+    display:none; 
+}
+
+.fab.expanded .fab-menu{ 
+    display:flex; 
+    flex-direction:column; 
+    gap:0.5rem; 
+    margin-bottom:0.5rem; 
+    align-items:flex-end; 
+}
+
+/* Dashboard improvements */
+.dashboard-hero { 
+    margin-bottom: 1rem; 
+}
+
+.kpi-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4,1fr); 
+    gap: 1rem; 
+}
+
+.kpi-card .metric { 
+    font-size:1.6rem; 
+    font-weight:700; 
+}
+
+.metric-sub { 
+    font-size:0.85rem; 
+    color: #6c757d; 
+}
+
+.dashboard-chart { 
+    min-height:200px; 
+    border-radius:10px; 
+    padding:1rem; 
+}
+
+.payroll-summary-card {
+    display:flex; 
+    gap:1rem; 
+    align-items:center; 
+    justify-content:space-between; 
+    padding:1.2rem; 
+}
+
+.payroll-total { 
+    font-size:1.6rem; 
+    font-weight:700; 
+}
+
+.payroll-cta { 
+    text-align:right; 
+}
+
+.shifts-card .shift { 
+    background: linear-gradient(90deg,#fff,#f8fbff); 
+    border-radius:8px; 
+    padding:0.8rem; 
+    box-shadow: none; 
+}
+
+.shifts-empty { 
+    color:#6c757d; 
+    padding:1rem; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px){ 
+    .kpi-grid{ 
+        grid-template-columns: repeat(2,1fr); 
+    } 
+}
+
+@media (max-width: 576px){ 
+    .kpi-grid{ 
+        grid-template-columns: 1fr; 
+    } 
+    .payroll-summary-card { 
+        flex-direction:column; 
+        align-items:flex-start; 
+    } 
+}
+
+
+/* Dashboard background image (external) and overlay for readability */
+.dashboard-bg{
+    position:relative;
+    background-image: url('https://img.freepik.com/premium-photo/labour-day-concept-diverse-group-workers-standing-solidarity-light-blue-background_475577-14353.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 2.5rem 1rem 3.5rem 1rem;
+    min-height: calc(100vh - 120px);
+    color: #fff;
+}
+.dashboard-bg::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.36), rgba(0,0,0,0.28));
+    z-index: 0;
+    pointer-events: none;
+}
+/* ensure inner content sits above overlay */
+.dashboard-bg > * { 
+    position: relative; 
+    z-index: 1;
+}
+/* make cards readable on top of the image */
+.dashboard-bg .card { 
+    background: rgba(255,255,255,0.96); 
+    color: #222; 
+}
+
+.dashboard-bg .kpi-card { 
+    background: rgba(255,255,255,0.96); 
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.dashboard-bg .kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.08);
+};
+.dashboard-bg .kpi-icon { color: rgba(13,110,253,0.85); }
+
+.dashboard-bg.kpi-badge {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.dashboard-bg.shift-card {
+  background: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+}
+
+@media (max-width:768px){
+    .dashboard-bg{ padding:1.2rem; min-height: auto; }
+}
+
+/* Custom navbar to match provided image */
+.custom-navbar{ 
+    background:#2b2f33; 
+    padding:10px; 
+}
+
+.custom-navbar .navbar-brand { 
+    font-size:1rem; 
+}
+
+.custom-navbar .nav-link { 
+    color: rgba(255,255,255,0.85); 
+    font-weight:600; 
+    padding:0.6rem 1rem; 
+}
+
+.custom-navbar .nav-link.active, .custom-navbar .nav-link:hover { 
+    color:#fff; 
+    background: rgba(255,255,255,0.03); 
+    border-radius:4px; 
+}
+
+.custom-navbar .btn-contact{ 
+    background:#24c7d6; 
+    color:#042028; 
+    border-radius:20px; 
+    padding:0.42rem 0.9rem; 
+    font-weight:700; 
+    box-shadow:none; 
+}
+
+.custom-navbar .btn-contact:hover{ 
+    opacity:0.95; 
+}
+
+.custom-navbar .btn-outline-light { 
+    border-color: rgba(255,255,255,0.12); 
+    color: rgba(255,255,255,0.9); 
+}
+
+.custom-navbar .navbar-toggler { 
+    border-color: rgba(255,255,255,0.06); 
+}
+
+@media (max-width: 991px){
+	.custom-navbar { border-radius:0; }
+	.custom-navbar .navbar-brand { margin-left:0.5rem; }
+}
