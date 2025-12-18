@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -57,3 +58,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Smart-Workers-Management-System-SWMS-Using-Laravel-Framework
+The Smart Worker Management System (SWMS) is a centralized workforce management  platform developed to automate and streamline worker-related operational processes. 
+>>>>>>> 4e5cfdd4cdcef0b962f293595b5ae44ff2fbd709
